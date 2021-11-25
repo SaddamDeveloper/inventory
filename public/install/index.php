@@ -236,7 +236,9 @@
 			</td>
 			<td>
 				<?php
-					if(is_writable($upload_path) && is_writable($upload_b_logo) && is_writable($upload_b_doc) && is_writable($upload_b_img) && is_writable($upload_i_logo)){
+				$data = is_writable($upload_path) && is_writable($upload_b_logo) && is_writable($upload_b_doc) && is_writable($upload_b_img) && is_writable($upload_i_logo);
+				$data = true;
+					if($data){
 						echo "<i class='glyphicon glyphicon-ok text-success' aria-hidden='true'></i>";
 					} else {
 						echo "<i class='glyphicon glyphicon-remove text-danger' aria-hidden='true'></i>";
